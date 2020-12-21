@@ -6,8 +6,8 @@ data = fetch(endpoint).then((response) => response.json()).then((data) => {
         let rawhtml = ` <center>
         <h3>Câu:${i+1}</h3>
         <div class="question">${data.results[i].question}</div>
-        <div><input type="radio" name="answers${i}" value="${data.results[i].correct_answer}">A.<span>${data.results[i].correct_answer}</span></div>
-        <div><input type="radio" name="answers${i}" value="${data.results[i].incorrect_answers[0]}">B.<span>${data.results[i].incorrect_answers[0]}</span></div>
+        <div><input type="radio" name="answers${i}" value="${data.results[i].incorrect_answers[0]}">A.<span>${data.results[i].incorrect_answers[0]}</span></div>
+        <div><input type="radio" name="answers${i}" value="${data.results[i].correct_answer}">B.<span>${data.results[i].correct_answer}</span></div>
         <div><input type="radio" name="answers${i}" value="${data.results[i].incorrect_answers[1]}">C.<span>${data.results[i].incorrect_answers[1]}</span></div>
         <div><input type="radio" name="answers${i}" value="${data.results[i].incorrect_answers[2]}">D.<span>${data.results[i].incorrect_answers[2]}</span></div>
         <div class="error${i}"></div>
